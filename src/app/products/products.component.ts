@@ -16,4 +16,6 @@ export class ProductsComponent implements OnInit {
           {id:3,title:"T_shirt 3",price:16,quantity:8,like:0},
          ]
      }
+  desible : boolean = true;   
+ 
 }

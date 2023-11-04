@@ -1,23 +1,14 @@
 <h2>Product List</h2>
-<div class="table-responsive">
-  <table class="table table-primary">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">Price</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Like</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of productList">
-        <td>{{ product.id }}</td>
-        <td>{{ product.title }}</td>
-        <td>{{ product.price }}</td>
-        <td>{{ product.quantity }}</td>
-        <td>{{ product.like }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table  class="table">
+   <tr><th>Id</th><th>Title</th><th>Price</th><th>Quantity</th><th>Like</th></tr>
+   <tr *ngFor="let product of productList">
+    <td>{{ product.id }}</td>
+    <td>{{ product.title }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.quantity }}</td>
+    <td>{{ product.like }}</td>
+    <td><button class="btn btn-warning active">Like</button></td>
+    <td><button class="btn btn-success active "  [disabled] = "product.quantity == 0">Buy</button></td>
+  </tr>
+
+</table>
