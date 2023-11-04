@@ -1,7 +1,8 @@
-export class Products{
-     id : number;
-    title: string;
-    price:number;
-    quantity:number;
-    like:number;
-}
+export class Products {
+    id: number = 0;
+    title: string = '';
+    price: number = 0;
+    quantity: number = 0;
+    like: number = 0;
+  }
+  

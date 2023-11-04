@@ -6,7 +6,8 @@ import { Products } from '../model/products';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-     productList : Products[];
+  productList: Products[] = [];
+
      constructor(){}
      ngOnInit(): void {
          this.productList = [
