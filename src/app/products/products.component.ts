@@ -7,7 +7,7 @@ import { Products } from '../model/products';
 })
 export class ProductsComponent implements OnInit {
   productList: Products[] = [];
-
+  priceMax :number = 5;
      constructor(){}
      ngOnInit(): void {
          this.productList = [

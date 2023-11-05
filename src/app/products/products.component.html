@@ -1,14 +1,23 @@
 <h2>Product List</h2>
+<form >
+   <div class="form-group">
+    <label> Search</label>
+    <input type="number" name="price " class="form-control" [(ngModel)]="priceMax">
+   </div>
+
+</form>
 <table  class="table">
    <tr><th>Id</th><th>Title</th><th>Price</th><th>Quantity</th><th>Like</th></tr>
-   <tr *ngFor="let product of productList ; let i = index">
+   <tbody  *ngFor="let product of productList ; let i = index">
+   <tr *ngIf="product.price<priceMax || priceMax ==null">
     <td>{{ product.id }}</td>
     <td>{{ product.title }}</td>
     <td>{{ product.price }}</td>
     <td>{{ product.quantity }}</td>
     <td>{{ product.like }}</td>
+
     <td><button class="btn btn-warning active" (click)="incrementer(i)">Like</button></td>
     <td><button class="btn btn-success active "  [disabled] = "product.quantity == 0" (click)="decrementer(i)">Buy</button></td>
   </tr>
-
+</tbody>
 </table>
